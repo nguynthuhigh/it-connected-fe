@@ -3,16 +3,23 @@ import Dashboard from "./admin/pages/home/dashboard"
 import Login from "./admin/pages/authentication/login"
 import ManageUser from "./admin/pages/manage-user/manage-user"
 function App() {
+
   const router =  createBrowserRouter([{
     path:'/',
     children:[
       {
         path:'dashboard', 
-        element:<Login></Login>
+        element:<Dashboard></Dashboard>
       },
       {
         path:'login',
-        element:<Login></Login>
+        element:(
+          <div className="flex w-full h-screen">
+          <div className="w-full flex items-center justify-center">
+            <Login/>
+          </div>
+        </div>
+        )
       },
       {
         path:'manage-user',
@@ -21,7 +28,7 @@ function App() {
     ]
   }])
   return(
-    <RouterProvider router={router}></RouterProvider>
+    <><RouterProvider router={router}></RouterProvider></>
   )
 }
 
