@@ -9,7 +9,7 @@ function App() {
     children:[
       {
         path:'dashboard', 
-        element:<Login></Login>
+        element:<Dashboard></Dashboard>
       },
       {
         path:'login',
