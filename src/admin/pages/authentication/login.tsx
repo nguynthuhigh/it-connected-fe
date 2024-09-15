@@ -24,7 +24,7 @@ const Login = () => {
       return;
     }// sai mật khẩu
     setError('');
-    navigate('/dashboard'); // chuyển sang trang khác khi đăng nhập thành công
+    navigate('/manage-user'); // chuyển sang trang khác khi đăng nhập thành công
   }
   const hideError = ()=>{
     if(error) {

@@ -10,9 +10,11 @@ export default {
         'bor-color-grey': '#BDBDBD',
         'forgotten': '#1814F3',
         'btn-login': '#1814F3'
-      }
+      },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
     },
   },
   plugins: [],
 }
-
+}
