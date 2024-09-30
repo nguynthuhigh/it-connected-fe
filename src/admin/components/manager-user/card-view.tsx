@@ -1,4 +1,4 @@
-import React from "react";
+
 import IconStonk from '../../assets/svg/IconStonk.svg';
 
 interface Person {
