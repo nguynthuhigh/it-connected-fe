@@ -3,6 +3,10 @@ import Dashboard from "./admin/pages/home/dashboard";
 import Login from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
 import CompanyDetails from "./client/pages/company/company-details";
+import Home from "./client/pages/home/home";
+
+
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -29,6 +33,13 @@ function App() {
         {
           path: "company",
           element: <CompanyDetails></CompanyDetails>,
+        },
+
+
+
+        {
+          path: "",
+          element: <Home></Home>
         },
       ],
     },
