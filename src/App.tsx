@@ -4,14 +4,17 @@ import Login from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
 import CompanyDetails from "./client/pages/company/company-details";
 import Home from "./client/pages/home/home";
-
-
+import Draft from "./client/pages/draft/draft";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       children: [
+        {
+          path: "draft",
+          element: <Draft></Draft>,
+        },
         {
           path: "dashboard",
           element: <Dashboard></Dashboard>,
@@ -35,11 +38,9 @@ function App() {
           element: <CompanyDetails></CompanyDetails>,
         },
 
-
-
         {
           path: "",
-          element: <Home></Home>
+          element: <Home></Home>,
         },
       ],
     },
