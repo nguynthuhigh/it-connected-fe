@@ -4,6 +4,6 @@
 
 @layer components {
   .container-default {
-    @apply max-w-[1400px] mx-auto p-4;
+    @apply max-w-[1250px] mx-auto p-4;
   }
 }
