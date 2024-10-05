@@ -3,9 +3,9 @@ import Dashboard from "./admin/pages/home/dashboard";
 import Login from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
 import CompanyDetails from "./client/pages/company/company-details";
-
-import CompanyReviews from "./client/pages/company/company-review";
 import Home from "./client/pages/home/home";
+import JobDetail from "./client/pages/JobDetail/JobDetail";
+import CompanyReviews from "./client/pages/company/company-review";
 import Draft from "./client/pages/draft/draft";
 function App() {
   const router = createBrowserRouter([
@@ -44,6 +44,11 @@ function App() {
         {
           path: "",
           element: <Home></Home>,
+        },
+
+        {
+          path: "job-detail",  // Thêm đường dẫn chi tiết tuyển dụng
+          element: <JobDetail></JobDetail>
         },
       ],
     },
