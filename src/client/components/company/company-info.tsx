@@ -1,9 +1,9 @@
 import React from "react";
 import WrapInfo from "./wrap-info";
 
-const CompanyInfo = () => {
+const CompanyInfo: React.FC = () => {
   return (
-    <div className="md:w-[69%] space-y-4">
+    <div className="md:w-[64%] space-y-4">
       <WrapInfo title="General information">
         <hr></hr>
         <div className="flex justify-between">

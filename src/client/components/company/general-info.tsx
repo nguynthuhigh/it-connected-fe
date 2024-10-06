@@ -2,10 +2,10 @@ import React from "react";
 import LocationCompany from "../../assets/svg/location_company.svg";
 import Connect from "../../assets/svg/connect.svg";
 
-const GeneralInfo = () => {
+const GeneralInfo: React.FC = () => {
   return (
-    <div className=" py-10 px-5 bg-[#78B6FF] text-white">
-      <div className="max-w-[1400px] mx-auto font-semibold font-inter  md:flex items-center">
+    <div className=" py-10  bg-[#78B6FF] text-white">
+      <div className="max-w-[1250px] px-4 mx-auto font-semibold font-inter  md:flex items-center">
         <div>
           <img
             className="w-[200px] mx-auto"
@@ -37,7 +37,7 @@ const GeneralInfo = () => {
             </button>
           </div>
         </div>
-        <div className="ml-auto">Reviews</div>
+        <div className="ml-auto max-md:mx-auto max-md:mt-5 w-[150px] h-[50px] bg-[#9FD7FF] rounded-lg"></div>
       </div>
     </div>
   );
