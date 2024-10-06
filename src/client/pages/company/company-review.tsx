@@ -1,9 +1,7 @@
 import React from 'react';
-import Header from '../../../admin/components/homepage/header';
-import Footer from '../../../admin/components/homepage/footer';
-import mbBank from '../../../admin/assets/png/mbbank-logo.png';
-import Bosch from '../../../admin/assets/png/bosch.png';
-import NAB from '../../../admin/assets/png/NAB.png';
+import mbBank from '../../assets/png/mbbank-logo.png';
+import Bosch from '../../assets/png/bosch.png';
+import NAB from '../../assets/png/NAB.png';
 import CompanyList from '../../components/company/company-review-list';
 import NewestReviews from '../../components/company/newest-review-list';
 
@@ -95,7 +93,6 @@ const companies = [
   const CompanyReviews: React.FC = () => {
   return (
     <div>
-      <Header />
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row lg:space-x-6">
           <div className="w-full lg:w-2/3 mb-8 lg:mb-0">
@@ -108,7 +105,6 @@ const companies = [
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
