@@ -41,6 +41,7 @@ function App() {
         {
           path: "company-review",
           element: <CompanyReviews></CompanyReviews>
+        },
         {
           path: "",
           element: <Home></Home>,
