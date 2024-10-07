@@ -1,7 +1,7 @@
 import React from "react";
 import Job from "./job";
 
-const TopJob = () => {
+const TopJob:React.FC = () => {
   return (
     <div className="space-y-12">
       <h1 className="font-semibold text-4xl text-center">

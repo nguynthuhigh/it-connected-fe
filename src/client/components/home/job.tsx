@@ -2,7 +2,7 @@ import React from "react";
 import Salary from "../../assets/svg/salary.svg";
 import WorkType from "../../assets/svg/working.svg";
 import Location from "../../assets/svg/location.svg";
-const Job = () => {
+const Job:React.FC = () => {
   return (
     <div className="w-full border-[2px]  rounded-[20px]">
       <div className="p-4 space-y-2">
