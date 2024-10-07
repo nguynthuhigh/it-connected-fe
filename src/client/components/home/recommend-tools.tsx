@@ -2,7 +2,7 @@ import React from "react";
 import ToolAI from "../../assets/svg/tool-ai.svg";
 import ToolCV from "../../assets/svg/tool-cv.svg";
 
-const RecommendTools = () => {
+const RecommendTools:React.FC = () => {
   return (
     <div className="mx-auto max-w-[1000px] space-y-12 ">
       <h1 className="font-semibold text-4xl text-center">

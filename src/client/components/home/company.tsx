@@ -2,7 +2,7 @@ import React from "react";
 import SkillVariant from "../variant/skill-variant";
 import Star from "../../assets/svg/star.svg";
 import Location from "../../assets/svg/location.svg";
-const Company = () => {
+const Company:React.FC = () => {
   return (
     <div className="w-full font-in cursor-pointer bg-white rounded-[25px] p-4 space-y-3">
       <div className="flex items-center">
