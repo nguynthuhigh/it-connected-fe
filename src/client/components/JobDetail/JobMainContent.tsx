@@ -1,56 +1,78 @@
+
 import React from 'react';
 
 const JobMainContent: React.FC = () => {
   return (
     <div style={{
-      padding: '20px',
+      padding: '10px',
       backgroundColor: '#fff',
-      borderRadius: '5px',
-      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-      marginBottom: '20px'
+      borderRadius: '10px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
+      marginBottom: '10px',
+      width: '100%', 
+      maxWidth: '1400px', 
+      margin: '0 auto',
     }}>
-      <h2 style={{ color: '#333', marginBottom: '15px' }}>Chi tiết tuyển dụng</h2>
+  
+      <h2 style={{ color: '#333', marginBottom: '20px',fontWeight: 'bold' }}>Job Details</h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px'}}>
+    
+        <img src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/employer_medias/f3cb7290ae6418396f89ab0bc018707c-66f627e236700.jpg" alt="Job Illustration 1" style={{
+          width: '200px',
+          height: '120px', 
+          borderRadius: '10px',
+          
+        }} />
       
-      <h3 style={{ color: '#007BFF', marginBottom: '10px' }}>Mô tả công việc</h3>
-      <ul style={{ marginBottom: '20px' }}>
-        <li>Phát triển và bảo trì các ứng dụng web sử dụng các ngôn ngữ lập trình hiện đại.</li>
-        <li>Phân tích yêu cầu và thiết kế giải pháp công nghệ phần mềm.</li>
-        <li>Phối hợp với các nhóm nội bộ để đảm bảo tiến độ dự án.</li>
+        {/* <img src="https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/employer_medias/f3cb7290ae6418396f89ab0bc018707c-66f627e236700.jpg" alt="Job Illustration 2" style={{
+             width: '200px',
+             height: '120px',
+          borderRadius: '10px',
+        }} /> */}
+      </div>
+
+      <h3 style={{ color: '#007BFF', marginBottom: '15px' }}>Job Description</h3>
+      <ul style={{ marginBottom: '25px' }}>
+        <li>Develop and maintain web applications using modern programming languages.</li>
+        <li>Analyze requirements and design software technology solutions.</li>
+        <li>Coordinate with internal teams to ensure project progress.</li>
       </ul>
 
-      <h3 style={{ color: '#007BFF', marginBottom: '10px' }}>Yêu cầu ứng viên</h3>
-      <ul style={{ marginBottom: '20px' }}>
-        <li>Kinh nghiệm từ 2 năm trở lên trong phát triển phần mềm.</li>
-        <li>Có kiến thức vững về ReactJS, NodeJS, và TypeScript.</li>
-        <li>Kỹ năng làm việc nhóm, quản lý thời gian tốt.</li>
-        <li>Ưu tiên ứng viên có khả năng giao tiếp tiếng Anh.</li>
+      <h3 style={{ color: '#007BFF', marginBottom: '15px' }}>Candidate Requirements</h3>
+      <ul style={{ marginBottom: '25px' }}>
+        <li>At least 2 years of software development experience.</li>
+        <li>Strong knowledge of ReactJS, NodeJS, and TypeScript.</li>
+        <li>Good teamwork and time management skills.</li>
+        <li>Priority for candidates with English communication skills.</li>
       </ul>
 
-      <h3 style={{ color: '#007BFF', marginBottom: '10px' }}>Quyền lợi</h3>
-      <ul style={{ marginBottom: '20px' }}>
-        <li>Lương cơ bản 20 - 30 triệu, có thể thương lượng.</li>
-        <li>Thưởng theo hiệu quả công việc và dự án.</li>
-        <li>Bảo hiểm sức khỏe và các chế độ phúc lợi hấp dẫn.</li>
+      <h3 style={{ color: '#007BFF', marginBottom: '15px' }}>Benefits</h3>
+      <ul style={{ marginBottom: '25px' }}>
+        <li>Basic salary $800 - $1,200, negotiable.</li>
+        <li>Performance and project-based bonuses.</li>
+        <li>Health insurance and attractive welfare benefits.</li>
       </ul>
 
-      <h3 style={{ color: '#007BFF', marginBottom: '10px' }}>Địa điểm làm việc</h3>
-      <p>83 Nguyễn Bá Khoản, Phường Yên Hòa, Cầu Giấy, Hà Nội</p>
+      <h3 style={{ color: '#007BFF', marginBottom: '15px' }}>Work Location</h3>
+      <p>83 Nguyen Ba Khoan, Yen Hoa Ward, Cau Giay District, Hanoi</p>
 
-      <h3 style={{ color: '#007BFF', marginBottom: '10px' }}>Cách thức ứng tuyển</h3>
-      <p>Ứng viên nộp hồ sơ trực tuyến bằng cách bấm Ứng tuyển ngay dưới đây. Hạn nộp hồ sơ: 30/10/2024</p>
+      <h3 style={{ color: '#007BFF', marginBottom: '15px' }}>Application Method</h3>
+      <p>Submit your application online by clicking Apply Now below. Application deadline: 30/10/2024</p>
 
       <button style={{
-        padding: '10px 15px',
+        padding: '12px 20px',
         backgroundColor: '#007BFF',
         color: '#fff',
         border: 'none',
         borderRadius: '5px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        fontSize: '16px'
       }}>
-        Lưu tin
+        Save Job
       </button>
     </div>
   );
 };
 
 export default JobMainContent;
+
