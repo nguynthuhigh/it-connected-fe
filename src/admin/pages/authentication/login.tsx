@@ -4,7 +4,7 @@ const users = [
   { username: "admin1", password: "123456abc" },
   { username: "admin2", password: "123456cdf" },
 ]; // fake data
-const Login = () => {
+const LoginAdmin = () => {
   const [user, setUser] = useState<string>('');
   const [pass, setPass] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -73,4 +73,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default LoginAdmin
