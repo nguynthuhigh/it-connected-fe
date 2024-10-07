@@ -6,7 +6,6 @@ import ggIcon from '../../assets/png/google.png'
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
