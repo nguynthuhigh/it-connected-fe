@@ -4,10 +4,10 @@ const users = [
   { username: "admin1", password: "123456abc" },
   { username: "admin2", password: "123456cdf" },
 ]; // fake data
-const Login = () => {
-  const [user, setUser] = useState<string>("");
-  const [pass, setPass] = useState<string>("");
-  const [error, setError] = useState<string>("");
+const LoginAdmin = () => {
+  const [user, setUser] = useState<string>('');
+  const [pass, setPass] = useState<string>('');
+  const [error, setError] = useState<string>('');
   const navigate = useNavigate();
   const checkLogin = () => {
     const u = users.find((u) => u.username === user); // lưu giá trị vào u sao khi so sánh giá trị username của u với users
@@ -79,4 +79,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginAdmin
