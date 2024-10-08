@@ -1,8 +1,6 @@
-// CompanySidebar.tsx
-import React from 'react';
 
 const CompanySidebar = () => {
-  // Inline styles
+
   const sidebarStyle = {
     backgroundColor: 'white',
     padding: '20px',
@@ -62,7 +60,7 @@ const CompanySidebar = () => {
   };
 
   return (
-    <div style={sidebarStyle}>
+    <div >
       <div style={titleStyle}>
         <a href="#" onClick={() => alert('Navigate to company detail page')}>
           <img

@@ -1,6 +1,4 @@
 
-import React from 'react';
-
 const JobHeader = () => {
 
   const headerStyle = {

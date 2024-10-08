@@ -1,5 +1,4 @@
-// JobMainContent.tsx
-import React from 'react';
+
 
 const JobMainContent = () => {
   
