@@ -5,8 +5,7 @@ export default {
     extend: {
       colors: {
         "bor-color-grey": "#BDBDBD",
-        "forgotten": "#1814F3",
-        "btn-login": "#1814F3",
+        "forgotten": "#0075FF",
         "blue-main": "#0094FF",
         "blue-extra": "#E7F5FF",
       },
