@@ -2,16 +2,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./admin/pages/home/dashboard";
 import LoginAdmin from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
-import CompanyDetails from "./client/pages/company/company-details";
-import Home from "./client/pages/home";
-import JobDetail from "./client/pages/JobDetail/JobDetail";
-import CompanyReviews from "./client/pages/company/company-review";
-import Draft from "./client/pages/draft/draft";
-import CompanyNewReviews from "./client/pages/company/company-new-review";
-import Register from "./client/pages/authentication/register";
-import Login from "./client/pages/authentication/login";
+import CompanyDetails from "./candidate/pages/company/company-details";
+import Home from "./candidate/pages/home";
+import JobDetail from "./candidate/pages/JobDetail/JobDetail";
+import CompanyReviews from "./candidate/pages/company/company-review";
+import Draft from "./candidate/pages/draft/draft";
+import CompanyNewReviews from "./candidate/pages/company/company-new-review";
+import Register from "./candidate/pages/authentication/register";
+import Login from "./candidate/pages/authentication/login";
 function App() {
   const router = createBrowserRouter([
+    //customer site
     {
       path: "/",
       children: [
@@ -20,31 +21,12 @@ function App() {
           element: <Draft></Draft>,
         },
         {
-          path: "dashboard",
-          element: <Dashboard></Dashboard>,
-        },
-        {
-          path: "login-admin",
-          element: (
-            <div className="flex w-full h-screen">
-              <div className="w-full flex items-center justify-center">
-                <LoginAdmin />
-              </div>
-            </div>
-          ),
-        },
-        {
-          path: "manage-user",
-          element: <ManageUser></ManageUser>,
-        },
-        {
           path: "company",
           element: <CompanyDetails></CompanyDetails>,
         },
         {
           path: "company-review",
           element: <CompanyReviews></CompanyReviews>,
-
         },
         {
           path: "",
@@ -52,7 +34,7 @@ function App() {
         },
         {
           path: "new-review",
-          element: <CompanyNewReviews></CompanyNewReviews>
+          element: <CompanyNewReviews></CompanyNewReviews>,
         },
         {
           path: "job-detail",
@@ -60,12 +42,36 @@ function App() {
         },
         {
           path: "register",
-          element: <Register></Register>
+          element: <Register></Register>,
         },
         {
           path: "login",
-          element: <Login></Login>
-        }
+          element: <Login></Login>,
+        },
+      ],
+    },
+    //company site
+    {
+      path: "/company",
+      children: [],
+    },
+    //admin site
+    {
+      path: "/admin",
+      children: [
+        {
+          path: "dashboard",
+          element: <Dashboard></Dashboard>,
+        },
+
+        {
+          path: "login-admin",
+          element: <LoginAdmin />,
+        },
+        {
+          path: "manage-user",
+          element: <ManageUser></ManageUser>,
+        },
       ],
     },
   ]);
