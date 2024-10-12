@@ -3,22 +3,18 @@ import WrapInfo from "./wrap-info";
 
 const CompanyInfo: React.FC = () => {
   return (
-    <div className="md:w-[64%] space-y-4">
+    <div className="w-full space-y-4">
       <WrapInfo title="General information">
-        <hr></hr>
-        <div className="flex justify-between">
-          <div>
-            <h1>Company type</h1>
-            <h1>IT Product</h1>
-          </div>
-          <div>
-            <h1>Company type</h1>
-            <h1>IT Product</h1>
-          </div>
-          <div>
-            <h1>Company type</h1>
-            <h1>IT Product</h1>
-          </div>
+        <div className="grid grid-cols-3 gap-5">
+          <Pattern title="Company type" content="Product"></Pattern>
+          <Pattern
+            title="Company industry"
+            content="Transportation, Logistics and Warehouse"
+          ></Pattern>
+          <Pattern title="Company size" content="50 - 100 Employees"></Pattern>
+          <Pattern title="Country" content="Vietnamese"></Pattern>
+          <Pattern title="Overtime policy" content="No OT"></Pattern>
+          <Pattern title="Working days" content="Monday - Friday"></Pattern>
         </div>
       </WrapInfo>
       <WrapInfo title="Company overview">
@@ -42,5 +38,15 @@ const CompanyInfo: React.FC = () => {
     </div>
   );
 };
-
+const Pattern: React.FC<{ title: string; content: string }> = ({
+  title,
+  content,
+}) => {
+  return (
+    <div className="font-inter">
+      <h1 className="font-semibold text-gray-main text-[12px]">{title}</h1>
+      <h1 className="text-sm font-medium">{content}</h1>
+    </div>
+  );
+};
 export default CompanyInfo;

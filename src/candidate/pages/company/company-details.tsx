@@ -4,6 +4,7 @@ import GeneralInfo from "../../components/company/general-info";
 import CompanyInfo from "../../components/company/company-info";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import CompanyReview from "../../components/company/company-review";
+import CompanyLocation from "../../components/company/company-location";
 const CompanyDetails: React.FC = () => {
   return (
     <div className="bg-gray-50">
@@ -17,7 +18,10 @@ const CompanyDetails: React.FC = () => {
 
           <TabPanel>
             <div className="md:flex justify-between">
-              <CompanyInfo></CompanyInfo>
+              <div className="md:w-[64%]">
+                <CompanyInfo></CompanyInfo>
+                <CompanyLocation />
+              </div>
               <div className="md:w-[35%] space-y-4">
                 <RecruitmentInfo type="hot"></RecruitmentInfo>
                 <RecruitmentInfo type="super-hot"></RecruitmentInfo>
