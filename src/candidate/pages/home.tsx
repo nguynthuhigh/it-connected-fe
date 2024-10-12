@@ -3,11 +3,9 @@ import RecommendTools from "../components/home/recommend-tools";
 import TopCompany from "../components/home/top-company";
 import TopJob from "../components/home/top-job";
 import HeaderHome from "../components/home/head";
-import Header from "../components/header/header";
-
 const Home: React.FC = () => {
   return (
-    <div className=" space-y-12">
+    <div className=" pt-10 space-y-12">
       <div className="container-default ">
         <HeaderHome></HeaderHome>
       </div>

@@ -12,19 +12,21 @@ import Register from "./candidate/pages/authentication/register";
 import Login from "./candidate/pages/authentication/login";
 import { Sidebar } from "./shared/components/sidebar/sidebar";
 import Header from "./candidate/components/header/header";
+import Footer from "./candidate/components/footer/footer";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
     <div style={{ flexGrow: 1, padding: "20px" }}>
-      <Outlet /> 
+      <Outlet />
     </div>
   </div>
 );
 const HeaderLayout = () => (
   <div style={{ display: "flex" }}>
     <Header />
-    <div style={{ flexGrow: 1, paddingTop:80 }}>
+    <div style={{ flexGrow: 1, paddingTop: 80 }}>
       <Outlet />
+      <Footer></Footer>
     </div>
   </div>
 );
