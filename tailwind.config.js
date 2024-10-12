@@ -5,9 +5,10 @@ export default {
     extend: {
       colors: {
         "bor-color-grey": "#BDBDBD",
-        "forgotten": "#0075FF",
+        forgotten: "#0075FF",
         "blue-main": "#0094FF",
         "blue-extra": "#E7F5FF",
+        "gray-main": "#757575",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

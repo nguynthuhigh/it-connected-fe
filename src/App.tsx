@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Dashboard from "./admin/pages/home/dashboard";
 import LoginAdmin from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
@@ -7,9 +7,18 @@ import Home from "./candidate/pages/home";
 import JobDetail from "./candidate/pages/JobDetail/JobDetail";
 import CompanyReviews from "./candidate/pages/company/company-review";
 import Draft from "./candidate/pages/draft/draft";
-import CompanyNewReviews from "./candidate/pages/company/company-new-review";
+import CompanyWriteReviews from "./candidate/pages/company/company-write-review";
 import Register from "./candidate/pages/authentication/register";
 import Login from "./candidate/pages/authentication/login";
+import { Sidebar } from "./shared/components/sidebar/sidebar";
+const RootLayout = () => (
+  <div style={{ display: "flex" }}>
+    <Sidebar />
+    <div style={{ flexGrow: 1, padding: "20px" }}>
+      <Outlet /> {/* This is where the route components will render */}
+    </div>
+  </div>
+);
 function App() {
   const router = createBrowserRouter([
     //customer site
@@ -17,43 +26,49 @@ function App() {
       path: "/",
       children: [
         {
-          path: "draft",
-          element: <Draft></Draft>,
+          path: "",
+          element: <Home />,
         },
         {
           path: "company",
-          element: <CompanyDetails></CompanyDetails>,
+          element: <CompanyDetails />,
         },
         {
-          path: "company-review",
-          element: <CompanyReviews></CompanyReviews>,
+          path: "reviews",
+          element: <CompanyReviews />,
         },
         {
-          path: "",
-          element: <Home></Home>,
+          path: "write-review",
+          element: <CompanyWriteReviews />,
         },
         {
-          path: "new-review",
-          element: <CompanyNewReviews></CompanyNewReviews>,
-        },
-        {
-          path: "job-detail",
-          element: <JobDetail></JobDetail>,
+          path: "job",
+          element: <JobDetail />,
         },
         {
           path: "register",
-          element: <Register></Register>,
+          element: <Register />,
         },
         {
           path: "login",
-          element: <Login></Login>,
+          element: <Login />,
         },
       ],
     },
     //company site
     {
       path: "/company",
-      children: [],
+      element: <RootLayout></RootLayout>,
+      children: [
+        {
+          path: "draft",
+          element: <Draft></Draft>,
+        },
+        {
+          path: "dashboard",
+          element: <Draft></Draft>,
+        },
+      ],
     },
     //admin site
     {
