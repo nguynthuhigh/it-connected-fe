@@ -13,6 +13,7 @@ import Login from "./candidate/pages/authentication/login";
 import { Sidebar } from "./shared/components/sidebar/sidebar";
 import Header from "./candidate/components/header/header";
 import Footer from "./candidate/components/footer/footer";
+import Invitations from "./company/pages/invitations";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
@@ -79,6 +80,10 @@ function App() {
         {
           path: "dashboard",
           element: <Draft></Draft>,
+        },
+        {
+          path: "invitations",
+          element: <Invitations></Invitations>,
         },
       ],
     },
