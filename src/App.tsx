@@ -1,19 +1,77 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Dashboard from "./admin/pages/home/dashboard";
 import LoginAdmin from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
-import CompanyDetails from "./client/pages/company/company-details";
-import Home from "./client/pages/home";
-import JobDetail from "./client/pages/JobDetail/JobDetail";
-import CompanyReviews from "./client/pages/company/company-review";
-import Draft from "./client/pages/draft/draft";
-import CompanyNewReviews from "./client/pages/company/company-new-review";
-import Register from "./client/pages/authentication/register";
-import Login from "./client/pages/authentication/login";
+import CompanyDetails from "./candidate/pages/company/company-details";
+import Home from "./candidate/pages/home";
+import JobDetail from "./candidate/pages/JobDetail/JobDetail";
+import CompanyReviews from "./candidate/pages/company/company-review";
+import Draft from "./candidate/pages/draft/draft";
+import CompanyWriteReviews from "./candidate/pages/company/company-write-review";
+import Register from "./candidate/pages/authentication/register";
+import Login from "./candidate/pages/authentication/login";
+import { Sidebar } from "./shared/components/sidebar/sidebar";
+import Header from "./candidate/components/header/header";
+import Footer from "./candidate/components/footer/footer";
+import Invitations from "./company/pages/invitations";
+const RootLayout = () => (
+  <div style={{ display: "flex" }}>
+    <Sidebar />
+    <div style={{ flexGrow: 1, padding: "20px" }}>
+      <Outlet />
+    </div>
+  </div>
+);
+const HeaderLayout = () => (
+  <div style={{ display: "flex" }}>
+    <Header />
+    <div style={{ flexGrow: 1, paddingTop: 80 }}>
+      <Outlet />
+      <Footer></Footer>
+    </div>
+  </div>
+);
 function App() {
   const router = createBrowserRouter([
+    //customer site
     {
       path: "/",
+      element: <HeaderLayout></HeaderLayout>,
+      children: [
+        {
+          path: "",
+          element: <Home />,
+        },
+        {
+          path: "company",
+          element: <CompanyDetails />,
+        },
+        {
+          path: "reviews",
+          element: <CompanyReviews />,
+        },
+        {
+          path: "write-review",
+          element: <CompanyWriteReviews />,
+        },
+        {
+          path: "job",
+          element: <JobDetail />,
+        },
+        {
+          path: "register",
+          element: <Register />,
+        },
+        {
+          path: "login",
+          element: <Login />,
+        },
+      ],
+    },
+    //company site
+    {
+      path: "/company",
+      element: <RootLayout></RootLayout>,
       children: [
         {
           path: "draft",
@@ -21,51 +79,31 @@ function App() {
         },
         {
           path: "dashboard",
-          element: <Dashboard></Dashboard>,
+          element: <Draft></Draft>,
         },
         {
+          path: "invitations",
+          element: <Invitations></Invitations>,
+        },
+      ],
+    },
+    //admin site
+    {
+      path: "/admin",
+      children: [
+        {
+          path: "dashboard",
+          element: <Dashboard></Dashboard>,
+        },
+
+        {
           path: "login-admin",
-          element: (
-            <div className="flex w-full h-screen">
-              <div className="w-full flex items-center justify-center">
-                <LoginAdmin />
-              </div>
-            </div>
-          ),
+          element: <LoginAdmin />,
         },
         {
           path: "manage-user",
           element: <ManageUser></ManageUser>,
         },
-        {
-          path: "company",
-          element: <CompanyDetails></CompanyDetails>,
-        },
-        {
-          path: "company-review",
-          element: <CompanyReviews></CompanyReviews>,
-
-        },
-        {
-          path: "",
-          element: <Home></Home>,
-        },
-        {
-          path: "new-review",
-          element: <CompanyNewReviews></CompanyNewReviews>
-        },
-        {
-          path: "job-detail",
-          element: <JobDetail></JobDetail>,
-        },
-        {
-          path: "register",
-          element: <Register></Register>
-        },
-        {
-          path: "login",
-          element: <Login></Login>
-        }
       ],
     },
   ]);
