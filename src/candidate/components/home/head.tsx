@@ -1,26 +1,45 @@
 import React from "react";
-
-const Header:React.FC = () => {
+import { TypeAnimation } from "react-type-animation";
+import HeadRight from "./head-right";
+import Location from "../../assets/svg/location-blue.svg?react";
+import { Link } from "react-router-dom";
+const Header: React.FC = () => {
   return (
-    <div className="flex justify-between">
-      <div className="w-[50%] space-y-5">
-        <h1 className="text-7xl font-bold max-w-[550px] ">
-          A New Journey the Future Ahead
+    <div className="flex justify-between mb-5">
+      <div className="lg:max-w-[58%] w-full">
+        <h1 className="text-7xl lg:max-h-[250px] h-full font-bold max-w-[550px] ">
+          <TypeAnimation
+            sequence={["A New Journey the Future Ahead"]}
+            wrapper="span"
+            speed={60}
+            repeat={0}
+            cursor={false}
+          />
         </h1>
         <div>
           <div className="h-[80px] w-full bg-blue-extra flex rounded-full font-semibold items-center p-4">
-            <div>Chọn khu vực</div>
+            <div className="flex">
+              <Location className="mx-3" />
+              <select className="bg-blue-extra outline-none" defaultValue={""}>
+                <option>Ho Chi Minh</option>
+                <option>Da Nang</option>
+                <option>Ha Noi</option>
+              </select>
+            </div>
             <div className=" border-l-[2px] border-gray-300 h-full mx-2"></div>
             <input
               placeholder="Search jobs"
-              className="w-[60%] pl-2 text-lg bg-blue-extra outline-none"
+              className="w-[50%] pl-2 text-lg bg-blue-extra outline-none"
             ></input>
-            <button className="w-fit h-fit px-6 text-sm py-3 bg-blue-main rounded-full text-white ml-auto">
+            <Link
+              to="/"
+              className="w-fit h-fit px-6 text-sm py-3 bg-blue-main rounded-full text-white ml-auto"
+            >
               Find Jobs
-            </button>
+            </Link>
           </div>
         </div>
-        <div className="">
+        <div className="mt-5">
           <div className="relative">
             <img
               className="w-[40px] rounded-full absolute"
@@ -39,7 +58,7 @@ const Header:React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="w-[300px] h-[300px] rounded-full bg-blue-main"></div>
+        <HeadRight></HeadRight>
       </div>
     </div>
   );

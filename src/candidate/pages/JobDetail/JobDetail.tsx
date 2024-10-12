@@ -1,7 +1,7 @@
 import React from 'react';
-import JobHeader from '../../components/JobDetail/JobHeader';
-import JobMainContent from '../../components/JobDetail/JobMainContent';
-import CompanySidebar from '../../components/JobDetail/CompanySidebar';
+import JobHeader from '../../components/job-details/JobHeader';
+import JobMainContent from '../../components/job-details/JobMainContent';
+import CompanySidebar from '../../components/job-details/CompanySidebar';
 import './JobDetail.css'; 
 const JobDetail: React.FC = () => {
   return (

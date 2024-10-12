@@ -2,16 +2,18 @@ import React from "react";
 import RecommendTools from "../components/home/recommend-tools";
 import TopCompany from "../components/home/top-company";
 import TopJob from "../components/home/top-job";
-import HeaderHome from "../components/home/header";
+import HeaderHome from "../components/home/head";
 import Header from "../components/header/header";
 
 const Home: React.FC = () => {
   return (
     <>
       <Header></Header>
-      <div className="space-y-20 mt-10">
-        <div className="container-default space-y-20">
+      <div className=" pt-24 space-y-12">
+        <div className="container-default ">
           <HeaderHome></HeaderHome>
+        </div>
+        <div className="container-default ">
           <RecommendTools></RecommendTools>
         </div>
         <div className=" bg-blue-extra">

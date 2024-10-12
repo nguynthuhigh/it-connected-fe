@@ -10,9 +10,10 @@ const CompanyDetails: React.FC = () => {
       <div className="container-default md:flex justify-between">
         <CompanyInfo></CompanyInfo>
         <div className="md:w-[35%] space-y-4">
-          <RecruitmentInfo></RecruitmentInfo>
-          <RecruitmentInfo></RecruitmentInfo>
-          <RecruitmentInfo></RecruitmentInfo>
+          <RecruitmentInfo type="hot"></RecruitmentInfo>
+          <RecruitmentInfo type="super-hot"></RecruitmentInfo>
+          <RecruitmentInfo type="new"></RecruitmentInfo>
+          <RecruitmentInfo type="normal"></RecruitmentInfo>
         </div>
       </div>
     </div>
