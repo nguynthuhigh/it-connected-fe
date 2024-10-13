@@ -4,7 +4,7 @@ import LoginAdmin from "./admin/pages/authentication/login";
 import ManageUser from "./admin/pages/manage-user/manage-user";
 import CompanyDetails from "./candidate/pages/company/company-details";
 import Home from "./candidate/pages/home";
-import JobDetail from "./candidate/pages/JobDetail/JobDetail";
+import JobDetail from "./candidate/pages/job-details/job-details";
 import CompanyReviews from "./candidate/pages/company/company-review";
 import Draft from "./candidate/pages/draft/draft";
 import CompanyWriteReviews from "./candidate/pages/company/company-write-review";
