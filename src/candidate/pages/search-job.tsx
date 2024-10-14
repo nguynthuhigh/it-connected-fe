@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import JobInfo from "../components/company/job-info";
 import SearchJob from "../components/filter/search";
 import Job from "../../shared/dummy-data/job.json";
 import Location from "../assets/svg/location.svg";
+import Filter from "../components/filter/filter";
+import Popup from "reactjs-popup";
 // import ReactPaginate from "react-paginate";
 const Search: React.FC = () => {
   // const handlePageClick = (event:unknown) => {
@@ -12,6 +14,7 @@ const Search: React.FC = () => {
   //   );
   //   setItemOffset(newOffset);
   // };
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div className="container-default space-y-4">
       <div className="max-w-[1000px] mx-auto p-4">
@@ -28,7 +31,7 @@ const Search: React.FC = () => {
               Employers special
             </div>
           </div>
-          <div className="h-[125px] w-[125px] absolute z-10 top-0 ml-48 mt-10">
+          <div className="h-[125px] w-[125px] absolute z-2 top-0 ml-48 mt-10">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"></img>
           </div>
         </div>
@@ -42,9 +45,19 @@ const Search: React.FC = () => {
           <h1 className="text-blue-main">200 việc làm khác</h1>
         </div>
       </div>
-      <h1 className="font-semibold text-4xl">
-        200 Việc làm tại <span>Ho Chi Minh</span>
-      </h1>
+      <div className="md:flex space-y-2 justify-between">
+        <h1 className="font-semibold text-4xl">
+          200 Việc làm tại <span>Ho Chi Minh</span>
+        </h1>
+        <button
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+          className="border-[2.5px] border-blue-main text-blue-main px-6 py-1 font-semibold text-lg rounded-lg"
+        >
+          Filter
+        </button>
+      </div>
       <div className="lg:columns-4 md:columns-3 sm:columns-2">
         {Job.jobs.map((item) => (
           <JobInfo search="." {...item}></JobInfo>
@@ -59,6 +72,24 @@ const Search: React.FC = () => {
         previousLabel="< previous"
         renderOnZeroPageCount={null}
       /> */}
+      <div className="max-w-[1200px]">
+        <Popup
+          onClose={() => {
+            setIsOpen(!isOpen);
+          }}
+          modal={true}
+          open={isOpen}
+          overlayStyle={{ background: "rgba(0, 0, 0, 0.5)" }}
+          contentStyle={{
+            width: "100%",
+            maxWidth: 700,
+            paddingLeft: 10,
+            paddingRight: 10,
+          }}
+        >
+          <Filter></Filter>
+        </Popup>
+      </div>
     </div>
   );
 };
