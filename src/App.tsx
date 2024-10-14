@@ -14,10 +14,11 @@ import { Sidebar } from "./shared/components/sidebar/sidebar";
 import Header from "./candidate/components/header/header";
 import Footer from "./candidate/components/footer/footer";
 import Invitations from "./company/pages/invitations";
+import Search from "./candidate/pages/search-job";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
-    <div style={{ flexGrow: 1, padding: "20px" }}>
+    <div style={{ flexGrow: 1, padding: "20px" }} className="bg-gray-50">
       <Outlet />
     </div>
   </div>
@@ -45,6 +46,10 @@ function App() {
         {
           path: "company",
           element: <CompanyDetails />,
+        },
+        {
+          path: "search",
+          element: <Search />,
         },
         {
           path: "reviews",

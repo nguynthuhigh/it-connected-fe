@@ -1,5 +1,5 @@
 import React from "react";
-import RecruitmentInfo from "../../components/company/recruitment-info";
+import RecruitmentInfo from "../../components/company/job-info";
 import GeneralInfo from "../../components/company/general-info";
 import CompanyInfo from "../../components/company/company-info";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
