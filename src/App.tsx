@@ -15,6 +15,7 @@ import Header from "./candidate/components/header/header";
 import Footer from "./candidate/components/footer/footer";
 import Invitations from "./company/pages/invitations";
 import Search from "./candidate/pages/search-job";
+import AddNewPost from "./company/pages/add-new-post/add-new-post";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
@@ -89,6 +90,10 @@ function App() {
         {
           path: "invitations",
           element: <Invitations></Invitations>,
+        },
+        {
+          path: "add-new-post",
+          element: <AddNewPost></AddNewPost>,
         },
       ],
     },
