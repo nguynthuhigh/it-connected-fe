@@ -2,10 +2,11 @@ import React from "react";
 import Salary from "../../assets/svg/salary.svg";
 import WorkType from "../../assets/svg/working.svg";
 import Location from "../../assets/svg/location.svg";
-const Job:React.FC = () => {
+import JobVariantHome from "../variant/job-variant-home";
+const Job: React.FC = () => {
   return (
-    <div className="w-full border-[2px]  rounded-[20px]">
-      <div className="p-4 space-y-2">
+    <JobVariantHome type="new">
+      <div className=" space-y-2 p-4 ">
         <div className="flex font-semibold items-center">
           <img
             className="w-[40px h-[40px] rounded-lg"
@@ -37,14 +38,14 @@ const Job:React.FC = () => {
           strategy, it was re-organized as NEC Vietnam Co., Ltd. in 2006,
         </p>
       </div>
-      <div className="bg-blue-extra flex justify-between p-2 rounded-b-[20px] text-sm font-semibold">
+      <div className="bg-white flex justify-between p-2 rounded-b-[20px] text-sm font-semibold">
         <div className="flex space-x-1">
           <img src={Location}></img>
           <h1>Ho Chi Minh City</h1>
         </div>
         <h1 className="text-blue-main">Posted 2 days ago</h1>
       </div>
-    </div>
+    </JobVariantHome>
   );
 };
 

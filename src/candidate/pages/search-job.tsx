@@ -53,7 +53,7 @@ const Search: React.FC = () => {
           onClick={() => {
             setIsOpen(!isOpen);
           }}
-          className="border-[2.5px] border-blue-main text-blue-main px-6 py-1 font-semibold text-lg rounded-lg"
+          className="border-[2.5px] border-gray-main text-gray-main px-10 py-1 font-semibold text-lg rounded-lg"
         >
           Filter
         </button>

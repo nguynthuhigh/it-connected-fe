@@ -47,13 +47,7 @@ const columns: TableColumnsType<DataType> = [
   {
     title: "DESCRIPTION",
     dataIndex: "description",
-    render: (_, { description }) => {
-      return (
-        <div className="w-max-[100px]">
-          <h1 className="truncate">{description}</h1>
-        </div>
-      );
-    },
+    width: "30%",
   },
   {
     title: "APPLIED DATE",
@@ -205,7 +199,12 @@ const onChange: TableProps<DataType>["onChange"] = (
 };
 
 const Invitations: React.FC = () => (
-  <Table<DataType> columns={columns} dataSource={data} onChange={onChange} />
+  <Table<DataType>
+    columns={columns}
+    dataSource={data}
+    onChange={onChange}
+    pagination={false}
+  />
 );
 
 export default Invitations;
