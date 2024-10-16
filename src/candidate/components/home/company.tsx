@@ -20,7 +20,7 @@ const skills = [
 const Company: React.FC = () => {
   return (
     <Link to="company">
-      <div className="w-full font-in cursor-pointer bg-white rounded-[25px] p-4 space-y-3">
+      <div className="w-full font-in cursor-pointer bg-white rounded-[25px] p-4 space-y-3 hover:-translate-y-1 hover:scale-110 transition ease-in-out delay-150">
         <div className="flex items-center">
           <img
             className="w-[70px] h-[70px] rounded-[20px]"
