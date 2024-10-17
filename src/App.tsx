@@ -16,6 +16,7 @@ import Footer from "./candidate/components/footer/footer";
 import Invitations from "./company/pages/invitations";
 import Search from "./candidate/pages/search-job";
 import AddNewPost from "./company/pages/add-new-post/add-new-post";
+import RegisterCompany from "./company/pages/register-company/RegisterPage";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
@@ -71,6 +72,10 @@ function App() {
         {
           path: "login",
           element: <Login />,
+        },
+        {
+          path: "register-company",
+          element: <RegisterCompany></RegisterCompany>,
         },
       ],
     },
