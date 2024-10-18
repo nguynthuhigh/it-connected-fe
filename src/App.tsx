@@ -17,6 +17,8 @@ import Invitations from "./company/pages/invitations";
 import Search from "./candidate/pages/search-job";
 import AddNewPost from "./company/pages/job/post-new-job";
 import Index from "./company/pages/job";
+import EditPostJob from "./company/pages/job/edit-post-job";
+import DetailPostJob from "./company/pages/job/detai-post-job";
 const RootLayout = () => (
   <div style={{ display: "flex" }}>
     <Sidebar />
@@ -92,9 +94,18 @@ function App() {
           path: "invitations",
           element: <Invitations></Invitations>,
         },
+        
         {
           path: "post-new-job",
           element: <AddNewPost></AddNewPost>,
+        },
+        {
+          path: "edit-post-job",
+          element: <EditPostJob></EditPostJob>,
+        },
+        {
+          path: "detail-post-job",
+          element: <DetailPostJob></DetailPostJob>,
         },
         {
           path: "jobs",
