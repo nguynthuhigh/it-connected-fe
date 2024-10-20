@@ -1,26 +1,44 @@
-import React, { useState } from 'react';
+import React from "react";
+import Input from "../../../shared/components/input-pattern/input";
+import SelectSearch from "../../../shared/components/input-pattern/select";
 
-import JobTitleInput from '../../components/add-new-post/job-title-input';
-import SalaryInput from '../../components/add-new-post/salary-input';
-import SkillSelect from '../../components/add-new-post/skill-select';
-import LocationSelect from '../../components/add-new-post/location-select';
-import DescriptionJob from '../../components/add-new-post/description-job';
+// import JobTitleInput from '../../components/add-new-post/job-title-input';
+// import SalaryInput from '../../components/add-new-post/salary-input';
+// import SkillSelect from '../../components/add-new-post/skill-select';
+// import LocationSelect from '../../components/add-new-post/location-select';
+// import DescriptionJob from '../../components/add-new-post/description-job';
 
 const AddNewPost: React.FC = () => {
-  const [jobTitle, setJobTitle] = useState('');
-  const [salary, setSalary] = useState('');
-  const [skill, setSkill] = useState('');
-  const [location, setLocation] = useState('');
-  const [visibility, setVisibility] = useState('public');
+  // const [jobTitle, setJobTitle] = useState('');
+  // const [salary, setSalary] = useState('');
+  // const [skill, setSkill] = useState('');
+  // const [location, setLocation] = useState('');
+  // const [visibility, setVisibility] = useState('public');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({ jobTitle, salary, skill, location, visibility });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log({ jobTitle, salary, skill, location, visibility });
+  // };
 
   return (
-    <div className="flex">
-      <div className="flex-1 p-6 ">
+    <div className="bg-white">
+      <div className="flex justify-between">
+        <Input
+          placeholder="Senior Nodejs...."
+          name="title"
+          title="Job title"
+          className="w-[70%]"
+        ></Input>
+        <Input
+          placeholder="Up to $1000, Deal...."
+          name="salary"
+          title="Salary"
+          className="w-[28%]"
+        ></Input>
+      </div>
+      <SelectSearch></SelectSearch>
+
+      {/* <div className="flex-1 p-6 ">
         <h1 className="text-2xl font-bold mb-6">Add new post</h1>
 
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
@@ -67,7 +85,7 @@ const AddNewPost: React.FC = () => {
             </button>
           </div>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

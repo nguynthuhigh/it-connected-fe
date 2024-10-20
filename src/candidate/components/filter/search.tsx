@@ -19,7 +19,7 @@ const SearchJob = () => {
           className="w-[50%] pl-2 text-lg bg-blue-extra outline-none"
         ></input>
         <Link
-          to="/"
+          to="/search"
           className="w-fit h-fit px-6 text-sm py-3 bg-blue-main rounded-full text-white ml-auto"
         >
           Find Jobs
