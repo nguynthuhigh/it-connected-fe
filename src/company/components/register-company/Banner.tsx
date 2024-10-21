@@ -5,7 +5,7 @@ const Banner = () => {
               src="https://chefjob.vn/wp-content/uploads/2020/07/mo-ta-cong-viec-nhan-vien-truc-tong-dai-khach-san.jpg" 
               alt="Banner" 
               className="w-full h-auto" 
-              style={{ maxHeight: '250px', objectFit: 'cover' }} // Đảm bảo hình ảnh có chiều cao tối đa
+              style={{ maxHeight: '450px', objectFit: 'cover' }} // Đảm bảo hình ảnh có chiều cao tối đa
           />
           <div 
               className="absolute inset-0 flex flex-col justify-center items-center text-white"

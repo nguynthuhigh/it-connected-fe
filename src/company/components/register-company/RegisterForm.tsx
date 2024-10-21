@@ -1,4 +1,12 @@
+import React, { useState } from 'react';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // Import CSS cho ReactQuill
+
 const RegisterForm = () => {
+  // State để quản lý nội dung của Company Description và Company Skill
+  const [description, setDescription] = useState('');
+  const [skills, setSkills] = useState('');
+
   return (
     <div className="max-w-6xl mx-auto bg-white p-10 shadow-md rounded-lg mt-10">
       <h2 className="text-3xl font-bold text-center mb-8">Register Company</h2>
@@ -32,16 +40,16 @@ const RegisterForm = () => {
 
         {/* Row 2 */}
         <div className="grid grid-cols-3 gap-4">
-        <div>
-  <label className="block mb-2 text-sm font-medium">Country</label>
-  <select className="w-full border border-gray-300 p-2 rounded-md">
-    <option value="Vietnam">Vietnam</option>
-    <option value="USA">USA</option>
-    <option value="Canada">Canada</option>
-    <option value="Australia">Australia</option>
-    {/* Thêm các tùy chọn quốc gia khác */}
-  </select>
-</div>
+          <div>
+            <label className="block mb-2 text-sm font-medium">Country</label>
+            <select className="w-full border border-gray-300 p-2 rounded-md">
+              <option value="Vietnam">Vietnam</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              {/* Thêm các tùy chọn quốc gia khác */}
+            </select>
+          </div>
           <div>
             <label className="block mb-2 text-sm font-medium">Working Day</label>
             <input
@@ -75,19 +83,23 @@ const RegisterForm = () => {
         {/* Row 4 - Company Description */}
         <div>
           <label className="block mb-2 text-sm font-medium">Company Description</label>
-          <textarea
-            className="w-full border border-gray-300 p-2 rounded-md h-24"
-            placeholder="Enter a description of the company"
-          ></textarea>
+          <ReactQuill
+            theme="snow"
+            value={description}
+            onChange={setDescription}
+            className="bg-white"
+          />
         </div>
 
         {/* Row 5 - Company Skill */}
         <div>
           <label className="block mb-2 text-sm font-medium">Company Skill</label>
-          <textarea
-            className="w-full border border-gray-300 p-2 rounded-md h-24"
-            placeholder="Enter the company skill description"
-          ></textarea>
+          <ReactQuill
+            theme="snow"
+            value={skills}
+            onChange={setSkills}
+            className="bg-white"
+          />
         </div>
 
         {/* Row 6 - Address and Map */}
@@ -102,10 +114,10 @@ const RegisterForm = () => {
           </div>
           <div>
             <label className="block mb-2 text-sm font-medium">Select location in map</label>
-            <img 
+            <img
               src="https://tapchigiaothong.qltns.mediacdn.vn/tapchigiaothong.vn/files/minh.phuong/2015/06/06/221407_maps1-1245.png"
               alt="Map"
-              className="w-350 h-329 object-cover rounded-md"
+              className="w-full h-36 object-cover rounded-md"
             />
           </div>
         </div>
