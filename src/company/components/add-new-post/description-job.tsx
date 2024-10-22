@@ -23,7 +23,7 @@ const DescriptionJob: React.FC<DescriptionJobProps> = ({ title }) => {
         onChange={handleEditorChange}
         placeholder="Enter description..."
         theme="snow"
-        className="h-48" 
+        className="h-32" 
       />
     </div>
   );
